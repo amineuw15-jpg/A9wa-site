@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>موعد الشاشة</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #151515;
+      color: white;
+    }
+
+    header {
+      background: #b5121b;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      text-align: center;
+    }
+
+    .logo h1 {
+      font-size: 24px;
+    }
+
+    .logo span {
+      color: #ffd447;
+      font-size: 12px;
+    }
+
+    button {
+      background: none;
+      border: 0;
+      color: white;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    .search {
+      padding: 14px;
+      background: #222;
+    }
+
+    .search input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #555;
+      border-radius: 25px;
+      background: #333;
+      color: white;
+      text-align: right;
+      font-size: 15px;
+    }
+
+    .banner {
+      margin: 14px;
+      padding: 22px 10px;
+      border-radius: 8px;
+      text-align: center;
+      background: linear-gradient(135deg, #071e4b, #1682b6);
+      color: #ffd447;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 10px 14px;
+    }
+
+    section h2 {
+      border-right: 4px solid #e3b52c;
+      padding-right: 9px;
+      margin-bottom: 14px;
+      font-size: 20px;
+    }
+
+    .movies {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .movie {
+      background: #242424;
+      border-radius: 7px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px #000;
+    }
+
+    .movie img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .movie-info {
+      padding: 9px;
+    }
+
+    .movie-info h3 {
+      font-size: 15px;
+      margin-bottom: 7px;
+    }
+
+    .movie-info p {
+      color: #bbb;
+      font-size: 12px;
+    }
+
+    .watch {
+      display: block;
+      background: #b5121b;
+      color: white;
+      text-align: center;
+      padding: 8px;
+      margin-top: 9px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #aaa;
+      font-size: 13px;
+    }
+
+    @media (min-width: 700px) {
+      .movies {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .movie img {
+        height: 280px;
+      }
+
+      main {
+        max-width: 1100px;
+        margin: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <button>☰</button>
+
+    <div class="logo">
+      <h1>موعد الشاشة</h1>
+      <span>كل حكاية تبدأ من هنا</span>
+    </div>
+
+    <button>⌕</button>
+  </header>
+
+  <div class="search">
+    <input type="search" placeholder="ابحث عن مسلسل أو حلقة...">
+  </div>
+
+  <main>
+    <div class="banner">
+      🎬 شاهد أحدث المسلسلات والحلقات
+    </div>
+
+    <section>
+      <h2>آخر الحلقات</h2>
+
+      <div class="movies">
+        <article class="movie">
+          <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=500" alt="مسلسل">
+          <div class="movie-info">
+            <h3>مسلسل الحكاية</h3>
+            <p>الحلقة 16 • تركي</p>
+            <a class="watch" href="#">شاهد الآن</a>
+          </div>
+        </article>
+
+        <article class="movie">
+          <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=500" alt="مسلسل">
+          <div class="movie-info">
+            <h3>قصة عشق</h3>
+            <p>الحلقة 67 • دراما</p>
+            <a class="watch" href="#">شاهد الآن</a>
+          </div>
+        </article>
+
+        <article class="movie">
+          <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=500" alt="مسلسل">
+          <div class="movie-info">
+            <h3>موعد جديد</h3>
+            <p>الحلقة 11 • رومانسي</p>
+            <a class="watch" href="#">شاهد الآن</a>
+          </div>
+        </article>
+
+        <article class="movie">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500" alt="مسلسل">
+          <div class="movie-info">
+            <h3>أيام جميلة</h3>
+            <p>الحلقة 5 • عربي</p>
+            <a class="watch" href="#">شاهد الآن</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>التصنيفات</h2>
+      <div class="banner">
+        تركي　 عربي　 كوري　 رومانسي　 دراما
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 موعد الشاشة - كل الحقوق محفوظة
+  </footer>
+
+</body>
+</html>
